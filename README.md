@@ -5,34 +5,26 @@ Análisis de la aleatoriedad y sesgos del modo aleatorio de Spotify.
 Evaluar empíricamente si el modo aleatorio (shuffle) de Spotify reproduce canciones de una playlist de forma realmente aleatoria o si existen sesgos en la selección del orden, y si dichos sesgos varían en función del historial de usuario o del dispositivo utilizado.
 
 ## 📦 4. Metodología
+Voy a empezar haciendo un solo test llamado Mono-Artista, una playlist con 12 temas de un solo artista, dejando
+fijas varias variables (todo esto esta siendo documentado en un excel el cual despues vere si subir)
 ### 📁 Dataset
-Playlist con 75 canciones, armada desde una cuenta neutral.
-
-Canciones variadas en género, artista y época, con duración homogénea.
-
-Mismo orden inicial y sin cambios.
+Playlist con 12 canciones, armada desde una cuenta neutral.
 
 ### 👥 Cuentas utilizadas
 Cuenta	Descripción
-Cuenta A	Cuenta personal con historial
 Cuenta B	Cuenta nueva sin historial
 Cuenta C	Cuenta neutral (creadora)
 
 ### 🧪 Protocolo experimental
-10 sesiones de reproducción por cuenta.
+15 sesiones minimas de reproducción por cuenta.
 
-Cada sesión reproduce 25 canciones en modo shuffle.
+Cada sesión reproduce 12 canciones en modo shuffle.
 
 No se interactúa con el reproductor (no se pausan, ni se saltean, ni se repiten canciones).
 
-Cada cuenta se rota entre dos dispositivos distintos (App de escritorio y reproductor web).
-
 ### 📝 Registro de datos
-Fecha, cuenta, dispositivo
-
-Orden exacto de canciones reproducidas
-
-Tiempos de reproducción (opcional)
+Fecha, cuenta, Orden exacto de canciones reproducidas, Tiempos de reproducción, popularidad de la cancion, 
+album, artista
 
 ## 📚 6. Resultados esperados
 Detectar si existe un patrón de repetición o dispersión artificial.
