@@ -20,7 +20,7 @@ SCOPE          = ("user-read-playback-state "
                   "user-modify-playback-state "
                   "user-read-private")
 PLAYLIST_URI   = os.getenv("PLAYLIST_URI")
-SESSIONS       = int(os.getenv("SESSIONS", "15"))
+SESSIONS       = int(os.getenv("SESSIONS", "8"))
 CSV_BASE_PATH  = os.getenv("CSV_BASE_PATH", "data/raw/1")
 
 sp = Spotify(auth_manager=SpotifyOAuth(
@@ -76,8 +76,7 @@ def registrar_sesion(n: int) -> List[dict]:
 
         # Calculamos cuanto falta del track para optimizar el sleep
         remaining_ms = item["duration_ms"] - pb.get("progress_ms", 0)
-        time.sleep(2)
-        #time.sleep(max(1, remaining_ms / 1000.0 * 0.5))  # 50 % del resto o al menos 1 s
+        time.sleep(max(1, remaining_ms / 1000.0 * 0.5))  # 50 % del resto o al menos 1 s
 
     return tracks
 
